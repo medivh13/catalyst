@@ -28,21 +28,21 @@ I have done the unit test and here are the results :
 
 
 # for db table :
-> in folder db, there is a .sql file with the create table command and insert command. I use postgresql for this case. you can run the command in your sql editor page.
-> if you running this project without docker, just make a connection into your localhost
-> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
-> if you running this project with docker, make a connection into 0.0.0.0 and make a database e.g I use projek
-> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
+>> in folder db, there is a .sql file with the create table command and insert command. I use postgresql for this case. you can run the command in your sql editor page.
+>> if you running this project without docker, just make a connection into your localhost
+>> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
+>> if you running this project with docker, make a connection into 0.0.0.0 and make a database e.g I use projek
+>> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
 
 # the endpoint
-> here is the curl for the endpoint :
-curl --location --request POST 'http://localhost:8080/api/brand' \
+here is the curl for the endpoint :
+>curl --location --request POST 'http://localhost:8080/api/brand' \
 --header 'Content-Type: application/json' \
 --data-raw '{
  "name" : "brand3"
 }'
 
-curl --location --request POST 'http://localhost:8080/api/product' \
+>curl --location --request POST 'http://localhost:8080/api/product' \
 --header 'Content-Type: application/json' \
 --data-raw '{
  "name" : "p5",
@@ -50,7 +50,7 @@ curl --location --request POST 'http://localhost:8080/api/product' \
  "brand_id" : 3
 }'
 
-curl --location --request POST 'http://localhost:8080/api/order' \
+>curl --location --request POST 'http://localhost:8080/api/order' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "data": [
@@ -67,7 +67,7 @@ curl --location --request POST 'http://localhost:8080/api/order' \
     ]
 }'
 
-curl --location --request GET 'http://localhost:8080/api/product?id=1' \
+>curl --location --request GET 'http://localhost:8080/api/product?id=1' \
 --header 'Content-Type: application/json' \
 --data-raw '{
  "name" : "p3",
@@ -75,7 +75,7 @@ curl --location --request GET 'http://localhost:8080/api/product?id=1' \
  "brand_id" : 4
 }'
 
-curl --location --request GET 'http://localhost:8080/api/product/brand?id=3' \
+>curl --location --request GET 'http://localhost:8080/api/product/brand?id=3' \
 --header 'Content-Type: application/json' \
 --data-raw '{
  "name" : "p3",
@@ -83,13 +83,13 @@ curl --location --request GET 'http://localhost:8080/api/product/brand?id=3' \
  "brand_id" : 4
 }'
 
-curl --location --request GET 'http://localhost:8080/api/order/2' \
+>curl --location --request GET 'http://localhost:8080/api/order/2' \
 --data-raw ''
 
 
 
 > here is the postman link if you want to use postman instead : 
-> https://www.getpostman.com/collections/2b3052ed2c1d6d96cee0
+>> https://www.getpostman.com/collections/cd44c44140a288415043
 
 # to run the project
 if you're not using docker, just set the .env file with yoyr database credential, then cd catalyst, do go run main.go
@@ -98,20 +98,20 @@ if you're not using docker, just set the .env file with yoyr database credential
 after clone and do some set up that explained before, do this following actions :
 - set database credential in .env
 
-in this part :
-DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml)
-DB_PORT=5432  
-DB_NAME=projek/your_db_name
-DB_USERNAME=your_db_user
-DB_PASSWORD=your_db_password
-DB_SCHEMA=warung_pintar
-DB_SSL_MODE=disable
+- in this part :
+>> DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml)
+>> DB_PORT=5432  
+>> DB_NAME=projek/your_db_name
+>> DB_USERNAME=your_db_user
+>> DB_PASSWORD=your_db_password
+>> DB_SCHEMA=warung_pintar
+>> DB_SSL_MODE=disable
 
-in this part :
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=your_db_password
-POSTGRES_DB=projek
-
+- in this part :
+>> POSTGRES_USER=postgres
+>> POSTGRES_PASSWORD=your_db_password
+>> POSTGRES_DB=projek
+ 
 - cd catalyst, docker-compose up
 - go to you postgresql db editor (pgAdmin, etc)
 - make a new connection to 0.0.0.0
