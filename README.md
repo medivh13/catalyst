@@ -8,8 +8,8 @@ I use existing libs :
 
 
 # For setup after cloning the repo:
-> cd catalyst \n
-> go mod tidy \n
+> cd catalyst <br />
+> go mod tidy <br />
 
 # to do a unit test :
 > go to the each usecase package you want to testing then run a command "go test"
@@ -99,23 +99,23 @@ after clone and do some set up that explained before, do this following actions 
 - set database credential in .env
 
 - in this part :
-+ DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml)
-+ DB_PORT=5432  
-+ DB_NAME=projek/your_db_name
-+ DB_USERNAME=your_db_user
-+ DB_PASSWORD=your_db_password
-+ DB_SCHEMA=warung_pintar
-+ DB_SSL_MODE=disable
+>> DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml) <br />
+>> DB_PORT=5432   <br />
+>> DB_NAME=projek/your_db_name <br />
+>> DB_USERNAME=your_db_user <br />
+>> DB_PASSWORD=your_db_password <br />
+>> DB_SCHEMA=warung_pintar <br />
+>> DB_SSL_MODE=disable <br />
 
 - in this part :
-+ POSTGRES_USER=postgres
-+ POSTGRES_PASSWORD=your_db_password
-+ POSTGRES_DB=projek
+>> POSTGRES_USER=postgres <br />
+>> POSTGRES_PASSWORD=your_db_password <br />
+>> POSTGRES_DB=projek <br />
  
-- cd catalyst, docker-compose up
-- go to you postgresql db editor (pgAdmin, etc)
-- make a new connection to 0.0.0.0
-- make a new database, in this project I make a db named "projek"
-- in db "projek" make a new schema named "catalyst"
-- do all command to make the table and insert, you can see the command in db/account.sql and db/customer.sql
-- project ready to use
+>> cd catalyst, docker-compose up <br />
+>> go to you postgresql db editor (pgAdmin, etc) <br />
+>> make a new connection to 0.0.0.0 <br />
+>> make a new database, in this project I make a db named "projek" <br />
+>> in db "projek" make a new schema named "catalyst" <br />
+>> do all command to make the table and insert, you can see the command in db/account.sql and db/customer.sql <br />
+>> project ready to use <br />
