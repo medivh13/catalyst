@@ -8,11 +8,11 @@ I use existing libs :
 
 
 # For setup after cloning the repo:
->> cd catalyst
->> go mod tidy
+> cd catalyst \n
+> go mod tidy \n
 
 # to do a unit test :
->> go to the each usecase package you want to testing then run a command "go test"
+> go to the each usecase package you want to testing then run a command "go test"
 >> you can see the coverage testing in each usecase package by open the project with vscode, choose the testing file, right click then choose "Go:Toogle Test Coverage in Current Package"
 
 # summary of unit test 
