@@ -8,12 +8,12 @@ I use existing libs :
 
 
 # For setup after cloning the repo:
-> cd catalyst
-> go mod tidy
+>> cd catalyst
+>> go mod tidy
 
 # to do a unit test :
-> go to the each usecase package you want to testing then run a command "go test"
-> you can see the coverage testing in each usecase package by open the project with vscode, choose the testing file, right click then choose "Go:Toogle Test Coverage in Current Package"
+>> go to the each usecase package you want to testing then run a command "go test"
+>> you can see the coverage testing in each usecase package by open the project with vscode, choose the testing file, right click then choose "Go:Toogle Test Coverage in Current Package"
 
 # summary of unit test 
 I have done the unit test and here are the results :
@@ -28,11 +28,11 @@ I have done the unit test and here are the results :
 
 
 # for db table :
->> in folder db, there is a .sql file with the create table command and insert command. I use postgresql for this case. you can run the command in your sql editor page.
->> if you running this project without docker, just make a connection into your localhost
->> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
->> if you running this project with docker, make a connection into 0.0.0.0 and make a database e.g I use projek
->> then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
+- in folder db, there is a .sql file with the create table command and insert command. I use postgresql for this case. you can run the command in your sql editor page.
+- if you running this project without docker, just make a connection into your localhost
+- then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
+- if you running this project with docker, make a connection into 0.0.0.0 and make a database e.g I use projek
+- then make new schema in db "projek", named "catalyst", after that run all the command in .sql file from brands, products, orders, then order_details
 
 # the endpoint
 here is the curl for the endpoint :
@@ -99,18 +99,18 @@ after clone and do some set up that explained before, do this following actions 
 - set database credential in .env
 
 - in this part :
->> DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml)
->> DB_PORT=5432  
->> DB_NAME=projek/your_db_name
->> DB_USERNAME=your_db_user
->> DB_PASSWORD=your_db_password
->> DB_SCHEMA=warung_pintar
->> DB_SSL_MODE=disable
++ DB_HOST=database (recommend to literally use "database" according to the docker-compose.yaml)
++ DB_PORT=5432  
++ DB_NAME=projek/your_db_name
++ DB_USERNAME=your_db_user
++ DB_PASSWORD=your_db_password
++ DB_SCHEMA=warung_pintar
++ DB_SSL_MODE=disable
 
 - in this part :
->> POSTGRES_USER=postgres
->> POSTGRES_PASSWORD=your_db_password
->> POSTGRES_DB=projek
++ POSTGRES_USER=postgres
++ POSTGRES_PASSWORD=your_db_password
++ POSTGRES_DB=projek
  
 - cd catalyst, docker-compose up
 - go to you postgresql db editor (pgAdmin, etc)
